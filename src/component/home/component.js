@@ -1,4 +1,4 @@
-let component = new Component({
+export default = new Component({
   name: 'home',
   data: {
    message: 'hello world'
@@ -8,7 +8,7 @@ let component = new Component({
       return this.message;
     },
     mounted(){
-      console.log('here')
+      console.log('here');
     },
     unmounted(){
     },
