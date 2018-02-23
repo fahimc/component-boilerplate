@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+  <head>
     <title></title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
     <script type="text/javascript" src="js/lib.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Component JS</h1>
-    <component-app></component-app>
-</body>
+    <div data-component="app">
+      <h1>app</h1>
+      <div data-router id="main-router">
+        <section data-route="/">
+          <div data-component="home">
+            <h1>home</h1>
+            <p>this is the home page</p>
+          </div>
+        </section>
+        <section data-route="/about">
+          <div data-component="about">
+            <h1>about</h1>
+            <p>this is the about page</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
 
 </html>
