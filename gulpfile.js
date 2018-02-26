@@ -4,10 +4,12 @@ var browserSync = require('browser-sync').create();
 require('./task/js')();
 require('./task/js-lib')();
 require('./task/sass')();
+require('./task/assets')();
+require('./task/clean')();
 require('./task/watch')(browserSync);
 require('./task/component-template')();
 
-gulp.task('default', ['js', 'js-lib','sass','html-component'], function() {
+gulp.task('default', ['js', 'js-lib','sass','html-component','assets'], function() {
 
     browserSync.init({
         server: {
@@ -17,4 +19,5 @@ gulp.task('default', ['js', 'js-lib','sass','html-component'], function() {
     gulp.watch("src/**/*.js", ['js-watch']);
     gulp.watch("src/**/*.scss", ['sass-watch']);
     gulp.watch(["index.html","src/**/*.html"], ['html-watch']);
+    gulp.watch(["assets/**/*"], ['assets-watch']);
 });

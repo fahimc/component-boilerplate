@@ -13,4 +13,8 @@ module.exports = function(browserSync) {
         browserSync.reload();
         done();
     });
+    gulp.task('assets-watch', ['assets'], function(done) {
+        browserSync.reload();
+        done();
+    });
 }

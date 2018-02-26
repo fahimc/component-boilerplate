@@ -4,7 +4,7 @@ var minify = require('gulp-minify');
 var gulp = require('gulp');
 
 module.exports = function() {
-    gulp.task('js-lib', function() {
+    gulp.task('js-lib',function() {
         return gulp.src(['src/lib/**/*.js'])
             .pipe(concat('lib.js'))
             //.pipe(browserify())
@@ -16,6 +16,6 @@ module.exports = function() {
                 exclude: ['tasks'],
                 ignoreFiles: ['.combo.js', '-min.js']
             }))
-            .pipe(gulp.dest('dist/js'));
+            .pipe(gulp.dest('dist/js/'));
     });
 }
