@@ -1,12 +1,13 @@
 var gulp = require('gulp');
 var rename = require("gulp-rename");
 var sass = require('gulp-sass');
+var concat = require('gulp-concat');
 
 module.exports = function() {
     gulp.task('sass', function() {
-        return gulp.src(['src/component/app/style/style.scss'])
+        return gulp.src(['src/lib/**/*.css','src/component/**/*.scss'])
             .pipe(sass.sync().on('error', sass.logError))
-            .pipe(rename('main.css'))
+            .pipe(concat('main.css'))
             .pipe(gulp.dest('dist/css/'));
     });
 }
