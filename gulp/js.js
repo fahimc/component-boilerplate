@@ -21,10 +21,12 @@ module.exports = function() {
             }))
             .pipe(gulp.dest('dist/js'));
             */
-             return browserify('src/app.js')
-             .transform( babelify )
-             .bundle()
-            .pipe( fs.createWriteStream('dist/js/app.js') );
-            //.pipe(gulp.dest('dist/js'));
+        return browserify('src/app.js')
+            .transform(babelify.configure({
+                presets: ["es2015"]
+            }))
+            .bundle()
+            .pipe(fs.createWriteStream('dist/js/app.js'));
+        //.pipe(gulp.dest('dist/js'));
     });
 }

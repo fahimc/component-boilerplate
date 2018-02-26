@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
     "browserify": "^16.1.0",
     "bufferstreams": "^1.1.3",
     "gulp-browserify": "^0.5.1",

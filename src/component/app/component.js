@@ -1,4 +1,4 @@
-export default = new Component({
+export default new Component({
   name: 'app',
   data: {
   },
