@@ -391,5 +391,37 @@ img {
 
 /*# sourceMappingURL=milligram.min.css.map */
 
+html,
+body {
+  padding: 0;
+  margin: 0; }
+
 .app {
   background: #fff; }
+
+#main-router {
+  width: 100%; }
+  #main-router section {
+    width: 100%;
+    padding: 20px; }
+
+[data-component="intro"] {
+  text-align: center; }
+  [data-component="intro"] h1 {
+    padding: 20px; }
+
+[data-component="home"] {
+  width: 100%; }
+
+[data-component="navigation"] {
+  background: #333;
+  padding: 10px;
+  color: #fff; }
+  [data-component="navigation"] h3 {
+    display: inline-block;
+    margin-bottom: 0; }
+  [data-component="navigation"] .link-holder {
+    float: right; }
+    [data-component="navigation"] .link-holder button.link {
+      color: #fff;
+      display: inline-block; }

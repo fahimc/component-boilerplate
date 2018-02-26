@@ -1,0 +1,16 @@
+[data-component="navigation"] {
+    background: #333;
+    padding: 10px;
+    color: #fff;
+    h3 {
+    	display: inline-block;
+    	margin-bottom:0;
+    }
+    .link-holder {
+    	float:right;
+        button.link {
+            color: #fff;
+            display: inline-block;
+        }
+    }
+}

@@ -9,14 +9,26 @@
   </head>
 
   <body>
-    <h1>Component JS</h1>
     <div data-component="app">
-      <h1>app</h1>
+      <div data-component="navigation">
+        <h3>component.js</h3>
+        <div class="link-holder">
+          <a href="#/">
+            <button class="link button-clear">home</button>
+          </a>
+          <a href="#/about">
+            <button class="link button-clear">about</button>
+          </a>
+        </div>
+      </div>
       <div data-router id="main-router">
         <section data-route="/">
-          <div data-component="home">
-            <h1>home</h1>
-            <p>this is the home page</p>
+          <div data-component="home" class="active">
+            <div data-component="intro">
+              <h1>A Tiny Modular Javascript Framework</h1>
+            </div>
+
+
           </div>
         </section>
         <section data-route="/about">

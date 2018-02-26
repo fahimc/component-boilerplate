@@ -14,11 +14,14 @@ module.exports = function() {
             if (!components) return htmlContent;
             components.forEach((componentTag) => {
                 let arr = componentTag.match(/component-(.*?)(\s|>)/);
+                let attributeArray  = componentTag.match(/<component-.*?\s(.*?)>/);
                 let componentName = arr[1];
                 if (componentName) {
                     let fileName = path.resolve(__dirname,'../') + path.sep + ComponentTemplate.COMPONENT_SRC_LOCATION + path.sep + componentName + path.sep + ComponentTemplate.COMPONENT_TEMPLATE_LOCATION + path.sep + 'template.html';
                     let data = fs.readFileSync(fileName);
-                    htmlContent = htmlContent.replace(new RegExp(componentTag, 'g'), data.toString());
+                    let actualHTML = data.toString();
+                    if(attributeArray && attributeArray[1])actualHTML = actualHTML.replace('>', ' '+attributeArray[1]+'>');
+                    htmlContent = htmlContent.replace(new RegExp(componentTag, 'g'), actualHTML);
                     htmlContent = ComponentTemplate.findComponents(htmlContent);
                 }
 

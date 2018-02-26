@@ -1,5 +1,5 @@
-import App from './component/app/component.js';
-import Home from './component/home/component.js';
+import App from './component/app/src/component.js';
+import Home from './component/home/src/component.js';
 const Main = {
     init() {
         document.addEventListener('DOMContentLoaded', this.onLoad.bind(this));

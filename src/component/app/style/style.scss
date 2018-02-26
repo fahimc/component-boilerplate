@@ -1,3 +1,18 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
 .app {
-	background:#fff;
+    background: #fff;
+}
+
+#main-router {
+    width: 100%;
+
+    section {
+        width: 100%;
+        padding:20px;
+    }
 }

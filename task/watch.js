@@ -1,7 +1,6 @@
 var gulp = require('gulp');
-var browserSync = require('browser-sync').create();
 
-module.exports = function() {
+module.exports = function(browserSync) {
     gulp.task('js-watch', ['js', 'js-lib'], function(done) {
         browserSync.reload();
         done();
