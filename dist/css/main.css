@@ -391,19 +391,41 @@ img {
 
 /*# sourceMappingURL=milligram.min.css.map */
 
+[data-component="about"] h1 {
+  padding: 20px; }
+
 html,
 body {
   padding: 0;
   margin: 0; }
 
-.app {
-  background: #fff; }
+body {
+  height: 100vh; }
+
+[data-component="app"] {
+  background: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; }
 
 #main-router {
-  width: 100%; }
+  display: block;
+  flex-grow: 1;
+  width: 100%;
+  overflow: auto;
+  position: relative; }
+  #main-router::-webkit-scrollbar {
+    width: 5px; }
+  #main-router::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(3, 3, 3, 0); }
+  #main-router::-webkit-scrollbar-thumb {
+    background-color: rgba(146, 181, 88, 0.5);
+    outline: 0px solid slategrey; }
   #main-router section {
     width: 100%;
-    padding: 20px; }
+    padding: 20px;
+    display: inline-block; }
 
 [data-component="features"] .card h4 {
   color: #92B558;
@@ -413,27 +435,52 @@ body {
   font-size: 0.8em;
   color: #666; }
 
+[data-component="footer"] {
+  background: #ccc;
+  padding: 20px;
+  width: 100%;
+  min-height: 50px;
+  text-align: center; }
+  [data-component="footer"] p {
+    margin-bottom: 0;
+    font-size: 0.8em; }
+
 [data-component="home"] {
   width: 100%; }
 
 [data-component="logo"] {
   text-align: center; }
 
-[data-component="navigation"] {
-  background: #333;
-  padding: 10px;
-  color: #fff; }
-  [data-component="navigation"] h3 {
-    display: inline-block;
-    margin-bottom: 0; }
-  [data-component="navigation"] .link-holder {
-    float: right; }
-    [data-component="navigation"] .link-holder button.link {
-      color: #fff;
-      display: inline-block; }
-
-
 [data-component="intro"] {
   text-align: center; }
   [data-component="intro"] h1 {
     padding: 20px; }
+
+[data-component="navigation"] {
+  background: #333;
+  padding: 10px;
+  color: #fff;
+  vertical-align: middle; }
+  [data-component="navigation"] h3 {
+    display: inline-block;
+    margin-bottom: 0;
+    font-size: 1em; }
+  [data-component="navigation"] .link-holder {
+    float: right; }
+    [data-component="navigation"] .link-holder button.link {
+      color: #fff;
+      display: inline-block;
+      line-height: inherit;
+      height: auto;
+      padding-left: 0; }
+  [data-component="navigation"] .nav {
+    width: 20px;
+    display: inline-block; }
+    [data-component="navigation"] .nav img {
+      vertical-align: middle; }
+  [data-component="navigation"] .clear-fix {
+    clear: both; }
+  @media (max-width: 768px) {
+    [data-component="navigation"] .link-holder {
+      float: none; } }
+

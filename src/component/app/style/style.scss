@@ -4,15 +4,41 @@ body {
     margin: 0;
 }
 
-.app {
+body {
+    height: 100vh;
+}
+
+
+
+[data-component="app"] {
     background: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 #main-router {
+    display: block;
+    flex-grow: 1;
     width: 100%;
+    overflow: auto;
+    position: relative;
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
 
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(3, 3, 3, 0);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(146, 181, 88, 0.5);
+        outline: 0px solid slategrey;
+    }
     section {
         width: 100%;
-        padding:20px;
+        padding: 20px;
+        display: inline-block;
     }
 }

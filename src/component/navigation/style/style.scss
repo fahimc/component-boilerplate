@@ -2,15 +2,37 @@
     background: #333;
     padding: 10px;
     color: #fff;
+    vertical-align: middle;
     h3 {
-    	display: inline-block;
-    	margin-bottom:0;
+        display: inline-block;
+        margin-bottom: 0;
+        font-size: 1em;
     }
     .link-holder {
-    	float:right;
+        float: right;
         button.link {
             color: #fff;
             display: inline-block;
+            line-height: inherit;
+            height: auto;
+            padding-left:0;
+        }
+    }
+    .nav {
+        width: 20px;
+        display: inline-block;
+        img {
+            vertical-align: middle;
+        }
+    }
+
+    .clear-fix {
+        clear: both;
+    }
+
+    @media (max-width: 768px) {
+        .link-holder {
+            float:none;
         }
     }
 }
