@@ -9,7 +9,9 @@ require('./task/clean')();
 require('./task/watch')(browserSync);
 require('./task/component-template')();
 
-gulp.task('default', ['js', 'js-lib','sass','html-component','assets'], function() {
+gulp.task('dist', ['js', 'js-lib','sass','html-component','assets']);
+
+gulp.task('default', ['dist'], function() {
 
     browserSync.init({
         server: {
@@ -21,3 +23,4 @@ gulp.task('default', ['js', 'js-lib','sass','html-component','assets'], function
     gulp.watch(["index.html","src/**/*.html"], ['html-watch']);
     gulp.watch(["assets/**/*"], ['assets-watch']);
 });
+
