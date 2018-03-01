@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
 
+require('./task/mkdir')();
 require('./task/js')();
 require('./task/js-lib')();
 require('./task/sass')();

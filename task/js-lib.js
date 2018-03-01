@@ -4,7 +4,7 @@ var minify = require('gulp-minify');
 var gulp = require('gulp');
 
 module.exports = function() {
-    gulp.task('js-lib',function() {
+    gulp.task('js-lib',['make-dist'],function() {
         return gulp.src(['src/lib/**/*.js'])
             .pipe(concat('lib.js'))
             //.pipe(browserify())

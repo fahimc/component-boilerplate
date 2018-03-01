@@ -30,7 +30,7 @@ module.exports = function() {
             return htmlContent;
         }
     };
-    gulp.task('html-component', function() {
+    gulp.task('html-component',['make-dist'], function() {
         return fs.createReadStream('index.html')
             .pipe(new bufferstreams(function(err, chunk, cb) {
                 if (err) {
