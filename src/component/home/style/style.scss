@@ -1,3 +1,27 @@
+@import '../../app/style/core/palette';
 [data-component="home"] {
-	width:100%;
+  width: 100%;
 }
+
+[data-component="features"] {
+  .card {
+    h4 {
+      color: $secondaryTextColor;
+      margin-bottom: 0;
+    }
+    p {
+      font-size: 0.8em;
+      color: #666;
+    }
+  }
+}
+[data-component="logo"] {
+    text-align: center;
+}
+[data-component="intro"]{
+  	text-align:center;
+  h1{
+  	padding:20px;
+  }
+}
+
