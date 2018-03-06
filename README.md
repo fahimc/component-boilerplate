@@ -21,6 +21,10 @@ npm install
 ```cmd
 npm run dev
 ```
+## Build project
+```cmd
+npm run dist
+```
 
 ## Create Component  
 Components need to have a consistent folder structure and specific **componentjs** tags etc. There is a simple npm script to help you create components. Use the following command:  
